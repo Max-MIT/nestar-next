@@ -157,7 +157,7 @@ const PropertyDetail: NextPage = ({ initialComment, ...props }: any) => {
 
 			await getPropertyRefetch({ input: id });
 			await getPropertiesRefetch({
-				Input: {
+				input: {
 					page: 1,
 					limit: 4,
 					sort: 'createdAt',
@@ -195,7 +195,7 @@ const PropertyDetail: NextPage = ({ initialComment, ...props }: any) => {
 
 	if (getPropertyLoading) {
 		return (
-			<Stack sx={{ display: 'flex', justifyContent: 'centr', alignItems: 'centr', width: '100%', height: '1080px' }}>
+			<Stack sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '1080px' }}>
 				<CircularProgress size={'4rem'} />
 			</Stack>
 		);
