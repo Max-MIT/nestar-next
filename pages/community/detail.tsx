@@ -149,7 +149,7 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 		}
 	};
 
-	const creteCommentHandler = async () => {
+	const createCommentHandler = async () => {
 		if (!comment) return;
 		try {
 			if (!user?._id) throw new Error(Messages.error2);
@@ -386,7 +386,7 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 										/>
 										<Stack className="button-box">
 											<Typography>{wordsCnt}/100</Typography>
-											<Button onClick={creteCommentHandler}>comment</Button>
+											<Button onClick={createCommentHandler}>comment</Button>
 										</Stack>
 									</Stack>
 								</Stack>
@@ -425,7 +425,7 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 																<DeleteForeverIcon sx={{ color: '#757575', cursor: 'pointer' }} />
 															</IconButton>
 															<IconButton
-																onClick={(e) => {
+																onClick={() => {
 																	setUpdatedComment(commentData?.commentContent);
 																	setUpdatedCommentWordsCnt(commentData?.commentContent?.length);
 																	setUpdatedCommentId(commentData?._id);
